@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<style>
+			fieldset {
+				background:lightyellow; 
+				border:10px solid yellow;
+				margin-bottom:10px;
+				width: 720px;	
+			}
+			
+			label {
+				width:180px;
+				display:inline-block;
+				text-align:right;
+				vertical-align:top;				
+			}
+			label:hover {font-size:25px}
+			input:hover {font-size:25px}
+			select:hover {font-size:25px}
+			
+
+			td{width:40px}
+			table {border-spacing:0px}
+			
+			.address {width:360px; height:50px} 
+			.gender {width:auto}
+			.contacts {width:auto}
+			.left {text-align:center; background:brown; color:white}
+			.right {text-align:center; background:purple; color:white}
+		
+		</style>
+	</head>
+
+	<body>
+		<h1>Please Enter Your Details For Our Dating Website!</h1> 
+		<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+			
+		<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+				<fieldset>
+					<legend>Your Face</legend>
+					<label for="avatar">Your Image:</label>
+					<input type="file" id="avatar" name="avatar" required> <br>
+					<label for="preview">Image Preview:</label>
+					<img type="" id="preview" name="preview">
+				</fieldset>
+				
+				<fieldset>
+					<legend>Your General Details</legend>
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required> <br>
+					<label for="gender">Gender:</label>
+					<input type="radio" class="gender" id="gender" name="gender" value="Male" required>Male 
+					<input type="radio" class="gender" id="gender" name="gender" value="Female" required>Female <br>
+					<label for="age">Age:</label>
+					<input type="number" id="age" name="age" min="18" max="100" value="18" required> <br>
+					<label for="birthdate">Date of Birth:</label>
+					<input type="date" id="birthdate" name="birthdate"> <br>
+					<label for="color">Favorite Color:</label>
+					<input type="color" id="color" name="color"> <br>
+					<label for="country">Which Country:</label>
+					<select id="country" name="country" > 
+						<option disabled selected value>no selection</option>
+						<option value="i">Italy</option>
+						<option value="uk">United Kingdom</option>
+						<option value="au">Australia</option>
+						<option value="c">China</option>
+						<option value="us">United States</option>
+					</select> 					
+				</fieldset>				
+			
+				<fieldset>
+					<legend>Your Indicators</legend>
+						<table>
+							<tr> 
+								<td> <label for="height">Height:</label> </td>   
+								<td class="left"> Short  </td>  
+								<td> <input type="range" id="height" name="height" min="0" max="100" step="5" value="50">  </td> 
+								<td class="right">Tall</td>
+							</tr>
+							<tr>
+								<td> <label for="salary">Salary:</label>  </td>   
+								<td class="left"> Poor   </td>  
+								<td> <input type="range" id="salary" name="salary" min="0" max="100" step="5" value="50">  </td> 
+								<td class="right">Rich</td>
+							</tr>
+						</table>
+				</fieldset>
+
+				<fieldset>
+					<legend>Your Contact Information</legend>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required> <br>
+					<label for="tel">Mobile:</label>
+					<input type="tel" id="tel" name="tel"> <br>
+					<label for="address">Address:</label>
+					<textarea class="address" id="address" name="address" placeholder="write your address here"></textarea> <br>
+					<label for="contacts" class="contacts">Method to contact you:</label>
+					<input type="checkbox" id="contacts" name="contacts" value="em">Email
+					<input type="checkbox" id="contacts" name="contacts" value="wa">Whatsapp
+					<input type="checkbox" id="contacts" name="contacts" value="chat">In-app chat
+				</fieldset>
+				
+				<input type="submit">
+		</form>
+	</body>
+
+<html>
+
